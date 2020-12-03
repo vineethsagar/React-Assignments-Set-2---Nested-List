@@ -7,7 +7,11 @@ const City = (props) => {
   console.log(props);
   return (
     <>
-      <li id={"city" + props.id} onClick={() => setdisplayTown(!displayTown)}>
+      <li
+        style={{ marginLeft: "60px", padding: "10px" }}
+        id={"city" + props.id}
+        onClick={() => setdisplayTown(!displayTown)}
+      >
         {props.id}. {props.city.name}
       </li>
       {displayTown &&
@@ -15,7 +19,7 @@ const City = (props) => {
           const id = index + 1;
 
           return (
-            <li id={"town" + id}>
+            <li style={{ marginLeft: "80px", padding: "5px" }} id={"town" + id}>
               {index + 1}. {town.name}
             </li>
           );

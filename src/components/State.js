@@ -7,16 +7,16 @@ const State = (props) => {
   console.log(cities);
   return (
     <>
-      <li id={"state" + props.id} onClick={() => setdisplayCity(!displayCity)}>
+      <li
+        style={{ marginLeft: "40px", padding: "15px" }}
+        id={"state" + props.id}
+        onClick={() => setdisplayCity(!displayCity)}
+      >
         {props.id}. {props.state.name}
       </li>
       {displayCity &&
         cities.map((city, index) => {
-          return (
-            <div>
-              <City key={index + 1} id={index + 1} city={city} />{" "}
-            </div>
-          );
+          return <City key={index + 1} id={index + 1} city={city} />;
         })}
     </>
   );

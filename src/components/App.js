@@ -159,11 +159,7 @@ function App() {
   return (
     <div id="main">
       {states.map((state, index) => {
-        return (
-          <div>
-            <State key={index + 1} id={index + 1} state={state} />{" "}
-          </div>
-        );
+        return <State key={index + 1} id={index + 1} state={state} />;
       })}
     </div>
   );
