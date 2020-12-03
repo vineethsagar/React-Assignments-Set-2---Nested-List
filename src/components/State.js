@@ -12,7 +12,11 @@ const State = (props) => {
       </li>
       {displayCity &&
         cities.map((city, index) => {
-          return <City key={index + 1} id={index + 1} city={city} />;
+          return (
+            <div>
+              <City key={index + 1} id={index + 1} city={city} />{" "}
+            </div>
+          );
         })}
     </>
   );
