@@ -7,9 +7,9 @@ const State = (props) => {
   console.log(cities);
   return (
     <>
-      <h1 id={"state" + props.id} onClick={() => setdisplayCity(!displayCity)}>
+      <li id={"state" + props.id} onClick={() => setdisplayCity(!displayCity)}>
         {props.id}. {props.state.name}
-      </h1>
+      </li>
       {displayCity &&
         cities.map((city, index) => {
           return <City key={index + 1} id={index + 1} city={city} />;

@@ -7,17 +7,17 @@ const City = (props) => {
   console.log(props);
   return (
     <>
-      <h1 id={"city" + props.id} onClick={() => setdisplayTown(!displayTown)}>
+      <li id={"city" + props.id} onClick={() => setdisplayTown(!displayTown)}>
         {props.id}. {props.city.name}
-      </h1>
+      </li>
       {displayTown &&
         towns.map((town, index) => {
           const id = index + 1;
 
           return (
-            <h1 id={"town" + id}>
+            <li id={"town" + id}>
               {index + 1}. {town.name}
-            </h1>
+            </li>
           );
         })}
     </>
