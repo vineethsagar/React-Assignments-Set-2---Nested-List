@@ -7,13 +7,13 @@ const City = (props) => {
   console.log(props);
   return (
     <>
-      <button
+      <h1
         style={{ marginLeft: "60px", padding: "10px" }}
         id={"city" + props.id}
         onClick={() => setdisplayTown(!displayTown)}
       >
         {props.id}. {props.city.name}
-      </button>
+      </h1>
       {displayTown &&
         towns.map((town, index) => {
           const id = index + 1;
