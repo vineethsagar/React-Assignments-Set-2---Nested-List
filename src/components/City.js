@@ -7,21 +7,21 @@ const City = (props) => {
   console.log(props);
   return (
     <>
-      <li
+      <button
         style={{ marginLeft: "60px", padding: "10px" }}
         id={"city" + props.id}
         onClick={() => setdisplayTown(!displayTown)}
       >
         {props.id}. {props.city.name}
-      </li>
+      </button>
       {displayTown &&
         towns.map((town, index) => {
           const id = index + 1;
 
           return (
-            <li style={{ marginLeft: "80px", padding: "5px" }} id={"town" + id}>
+            <h1 style={{ marginLeft: "80px", padding: "5px" }} id={"town" + id}>
               {index + 1}. {town.name}
-            </li>
+            </h1>
           );
         })}
     </>
